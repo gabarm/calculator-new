@@ -11,6 +11,7 @@ namespace calculator_new
 
         public static double Addition(double num1, double num2)
         {
+         
             return num1 + num2;
         }
 
@@ -76,34 +77,30 @@ namespace calculator_new
                 {
                    
                     case 1:
-                       Addition(num1 = numberInput("first"), num2 = numberInput("second"));
-                        result = num1 + num2;
+                        result = Addition(num1 = numberInput("first"), num2 = numberInput("second") );
                         CalcAnswer(num1, num2, result,"+");
                         break;
 
                     case 2:
-                        Subtraction(num1 = numberInput("first"), num2 = numberInput("second"));
-                        result = num1 - num2;
+                        result =Subtraction(num1 = numberInput("first"), num2 = numberInput("second"));
                         CalcAnswer(num1, num2, result,"-");
                         break;
 
                     case 3:
-                        Multiply(num1 = numberInput("first"), num2 = numberInput("second"));
-                        result = num1 * num2;
+                       result = Multiply(num1 = numberInput("first"), num2 = numberInput("second"));
                         CalcAnswer(num1, num2, result,"*");
                         break;
 
                     case 4:
                         try
                         {
-                            Divide(num1 = numberInput("first"), num2 = numberInput("second")) ;
+                           result = Divide(num1 = numberInput("first"), num2 = numberInput("second")) ;
                         }
                         catch (DivideByZeroException e)
                         {
                             Console.WriteLine(e);
                         }
-                        result = num1 / num2;
-                        CalcAnswer(num1, num2, result, "/");
+                            CalcAnswer(num1, num2, result, "/");
                         break;
 
                     case 0:
